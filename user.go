@@ -2,6 +2,7 @@ package draven
 
 import "time"
 
+// User https://developers.facebook.com/docs/graph-api/reference/user/
 type User struct {
 	About                       string
 	ID                          string
@@ -20,48 +21,47 @@ type User struct {
 	FavoriteTeams               []Experience
 	FirstName                   string
 	Gender                      string
-	Hometown                    Page
+	Hometown                    *Page
 	InspirationalPeople         []Experience
-	// InstallType Enum
-	Installed        bool
-	InterestedIn     []string
-	IsPaymentEnabled bool
-	IsSharedLogin    bool
-	IsVerified       bool
+	Installed                   bool
+	InterestedIn                []string
+	IsPaymentEnabled            bool
+	IsSharedLogin               bool
+	IsVerified                  bool
+	Languages                   []Experience
+	LastName                    string
+	Link                        string
+	Locale                      string
+	Location                    *Page
+	MeetingFor                  []string
+	MiddleName                  string
+	Name                        string
+	NameFormat                  string
+	Political                   string
+	ProfilePic                  string
+	PublicKey                   string
+	Quotes                      string
+	RelationshipStatus          string
+	Religion                    string
+	ShortName                   string
+	SignificantOther            *User
+	Sports                      []Experience
+	TestGroup                   int32
+	ThirdPartyID                string
+	TimeZone                    float32
+	TokenForBusiness            string
+	UpdateTime                  time.Time
+	Verified                    bool
+	ViewerCanSendGift           bool
+	Website                     string
+	// InstallType int
 	// Labels []PageLabel
-	Languages []Experience
 	// LastAdReferral
-	LastName   string
-	Link       string
-	Locale     string
-	Location   Page
-	MeetingFor []string
-	MiddleName string
-	Name       string
-	NameFormat string
 	// PaymentPricePoints PaymentPricePoints
-	Political          string
-	ProfilePic         string
-	PublicKey          string
-	Quotes             string
-	RelationshipStatus string
-	Religion           string
 	// SecuritySettings SecuritySettings
 	// SharedLoginUpgradeRequiredBy
-	ShortName string
-	// SignificantOther User
-	Sports           []Experience
-	TestGroup        int32
-	ThirdPartyID     string
-	TimeZone         float32
-	TokenForBusiness string
-	UpdateTime       time.Time
-	Verified         bool
 	// VideoUploadLimits VideoUploadLimits
-	ViewerCanSendGift bool
-	Website           string
 	// Work []WorkExperience
-	// https://developers.facebook.com/docs/graph-api/reference/user/
 }
 
 type CoverPhoto struct {
@@ -92,12 +92,12 @@ type Location struct {
 	Country     string
 	CountryCode string
 	Latitude    float32
+	Longitude   float32
+	Name        string
+	Region      string
+	RegionID    int32
+	State       string
+	Street      string
+	ZIP         string
 	// LocatedIn ???
-	Longitude float32
-	Name      string
-	Region    string
-	RegionID  int32
-	State     string
-	Street    string
-	ZIP       string
 }
